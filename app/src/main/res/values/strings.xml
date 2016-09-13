@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PlaymentTask</string>
+    <string name="loading">Loading..</string>
+    <string name="hint">Search movie by genre</string>
+    <string name="search">Search</string>
+    <string name="title">Search movie</string>
+    <string name="title_detail">Movie Details</string>
+
+</resources>
