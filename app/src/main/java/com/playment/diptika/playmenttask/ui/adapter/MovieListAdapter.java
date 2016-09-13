@@ -64,14 +64,24 @@ public class MovieListAdapter extends BaseAdapter {
             e.printStackTrace();
         }
 
-        convertView.setOnClickListener(new View.OnClickListener() {
+
+        convertView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View view) {
+            public boolean onLongClick(View v) {
                 Intent moviedetail=new Intent(mContext, MovieDetailActivity.class);
                 moviedetail.putExtra("ID",movies[position].getImdbID());
                 mContext.startActivity(moviedetail);
-                            }
+                return false;
+            }
         });
+//        convertView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent moviedetail=new Intent(mContext, MovieDetailActivity.class);
+//                moviedetail.putExtra("ID",movies[position].getImdbID())
+//                mContext.startActivity(moviedetail);
+//                            }
+//        });
         return convertView;
     }
 

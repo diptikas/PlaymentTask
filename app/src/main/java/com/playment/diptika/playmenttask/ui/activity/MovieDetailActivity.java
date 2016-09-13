@@ -81,7 +81,11 @@ public class MovieDetailActivity extends BaseActivity implements Callback<Movie>
         Toast.makeText(getApplicationContext(),"Something went wrong",Toast.LENGTH_SHORT).show();
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }
 
 
